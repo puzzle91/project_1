@@ -23,6 +23,11 @@ h1,
 
 }
 
+#hiddenDIV {
+
+display:none;
+}
+
 .about_me { padding-top: 40px;
             padding-left: 50px;
             text-align: center;
