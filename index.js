@@ -1,5 +1,5 @@
 
-<script>
+
 function validateForm() {
     var name =  document.getElementById('name').value;
     if (name == "") {
@@ -33,7 +33,3 @@ function validateForm() {
 }
 
 
-
-
-
-</script>
