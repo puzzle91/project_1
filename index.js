@@ -31,4 +31,9 @@ function validateForm() {
     document.getElementById('contact-form').submit();
 
 }
+
+
+
+
+
 </script>

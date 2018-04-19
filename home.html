@@ -8,6 +8,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="footer.css">
     <link rel="stylesheet" type="text/css" href="navbar.css">
     <link href="index.css" rel="stylesheet" type="text/css">
     <title>Eduardo Parkinson de Castro</title>
@@ -41,6 +42,7 @@
         <li><a href="home.html">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="http://eduardomp10.blogspot.ie/">Blog</a></li>
       </ul>
     </nav>
     
@@ -66,13 +68,16 @@
     <div class="title">
     <div class="col-sm-8">
 
-<h1 id="homepage"> Welcome to my homepage</h1>
-<p class="description"> Welcome to my homepage. Here you will find brief discussions of what I am currently learning and/or have learned! If you have any questions you can contact me directly via the contact page.  </p>
+
+
+<h1 id="homepage" onclick="myFunction()"> Welcome to my homepage</h1>
+<p class="description" id="description"> Welcome to my homepage. Here you will find brief discussions of what I am currently learning and/or have learned! If you have any questions you can contact me directly via the contact page.  </p>
 </div>
 
 </div>
 </div>
 </div>
+
 
 
 
@@ -194,7 +199,7 @@
 <!-- contact form content begins here -->
 
 <section class="section">
-
+<div class="container">
 
     <div class="row">
 
@@ -215,7 +220,7 @@
                     <div class="col-sm-4">
                         <div class="md-form">
                          <label for="name" class="control-label">Your name</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter name">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter name" required>
                            
                         </div>
                     </div>
@@ -236,7 +241,7 @@
                   <div class="col-sm-4">
                         <div class="md-form">
                         <label for="email" class="">Your email</label>
-                            <input type="text" id="email" name="email" class="form-control" placeholder="Enter email">
+                            <input type="text" id="email" name="email" class="form-control" placeholder="Enter email" required>
                             
                         </div>
                     </div>
@@ -260,7 +265,7 @@
                     <div class="col-sm-4">
                         <div class="md-form">
                          <label for="subject" class="">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter subject">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter subject" required>
                            
                         </div>
                     </div>
@@ -284,7 +289,7 @@
 
                         <div class="md-form">
                           <label for="message">Your message</label>
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Enter message"></textarea>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Enter message" required></textarea>
         
                         </div>
 
@@ -306,7 +311,7 @@
             <div class="center-on-small-only">
 
                 
-        <a class="btn btn-primary" onclick="validateForm()">Send</a>
+        <a class="btn btn-primary" type="submit" onclick="validateForm()">Send</a>
             </div>
             <div class="status"></div>
         </div>
@@ -318,13 +323,34 @@
  </div> 
 
     </div>
+</div>
+</section>
+
+
+<section>
+  
+<footer class="footer">
+      <div class="container">
+     
+ <ul class="social-icon animate pull-right">
+                  <li><a href="#" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li> 
+                  <li><a href="#" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" title="google plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+                </div>
+    </footer>
+
+
 
 </section>
-<!--Section: Contact v.2-->
 
-  </div>
-        </div>
-            </div>
 
+  <script>
+        $(document).ready(function(){
+            $("#contact-form").submit(function(){
+                alert("Thank you for contacting us. You should hear back from us soon.");
+            });
+        });
+        </script>
 
 </body>
